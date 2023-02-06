@@ -1,0 +1,19 @@
+# 应用服务 web 访问端口
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/warehouse?servertimezone=Asia?Shanghai&useUnicode=true&charaterEncoding=utf-8
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.example.crmserver.model
+  configuration:
+    #驼峰命名规则
+    map-underscore-to-camel-case: true
+logging:
+  pattern:
+    level:
+      com.example.crmserver
